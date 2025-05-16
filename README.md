@@ -1,4 +1,4 @@
-# 🩺 Diabetes Prediction Project
+# Diabetes Prediction Project
 
 This project aims to predict whether an individual has diabetes using machine learning techniques. A web-based interface collects user input, feeds it into a trained model, and displays the prediction result on the screen.
 
