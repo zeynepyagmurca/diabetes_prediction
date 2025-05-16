@@ -1,0 +1,6 @@
+{
+    "INSULIN": {
+        "low_limit": -190.875,
+        "up_limit": 318.125
+    }
+}

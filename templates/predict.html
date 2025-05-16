@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Diabetes Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f6fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            background: #ffffff;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            text-align: center;
+            background-color: #e9f7ef;
+            border-left: 5px solid #28a745;
+            color: #155724;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Diabetes Prediction</h2>
+        <form method="post">
+            <label>PREGNANCIES</label>
+            <input type="text" name="PREGNANCIES" required>
+
+            <label>GLUCOSE</label>
+            <input type="text" name="GLUCOSE" required>
+
+            <label>BLOOD PRESSURE</label>
+            <input type="text" name="BLOODPRESSURE" required>
+
+            <label>SKIN THICKNESS</label>
+            <input type="text" name="SKINTHICKNESS" required>
+
+            <label>INSULIN</label>
+            <input type="text" name="INSULIN" required>
+
+            <label>BMI</label>
+            <input type="text" name="BMI" required>
+
+            <label>DIABETES PEDIGREE FUNCTION</label>
+            <input type="text" name="DIABETESPEDIGREEFUNCTION" required>
+
+            <label>AGE</label>
+            <input type="text" name="AGE" required>
+
+            <input type="submit" value="Tahmin Et">
+        </form>
+
+        {% if prediction is not none %}
+            <div class="result">
+                <strong>Prediction:</strong> {{ prediction }}
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>
